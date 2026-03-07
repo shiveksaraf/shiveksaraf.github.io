@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivek | Developer &amp; Creator</title>
+  <meta name="description" content="Shivek - Developer & Creator. Building at the intersection of Web Development and Technology.">
+  <meta name="keywords" content="Shivek, developer, creator, web development, full stack, portfolio">
+  <meta name="author" content="Shivek">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563EB">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shivek | Developer & Creator">
+  <meta property="og:description" content="Shivek - Developer & Creator. Building at the intersection of Web Development and Technology.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theshulkerboxx.github.io">
+  <meta property="og:image" content="https://theshulkerboxx.github.io/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shivek | Developer & Creator">
+  <meta name="twitter:description" content="Shivek - Developer & Creator. Building at the intersection of Web Development and Technology.">
+  <meta name="twitter:image" content="https://theshulkerboxx.github.io/og-image.png">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shivek",
+    "url": "https://theshulkerboxx.github.io",
+    "jobTitle": "Developer & Creator",
+    "sameAs": [
+      "https://github.com/TheShulkerBoxx"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F3F4F6',
+            ink: '#111827',
+            subtle: '#6B7280',
+            divider: '#E5E7EB',
+            primary: '#2563EB',
+            secondary: '#7C3AED',
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            mono: ['Space Mono', 'monospace'],
+          },
+          animation: {
+            'marquee': 'marquee 30s linear infinite',
+            'fade-in': 'fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'blob': 'blob 7s infinite',
+          },
+          keyframes: {
+            marquee: { '0%': { transform: 'translateX(0%)' }, '100%': { transform: 'translateX(-100%)' } },
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            slideUp: { '0%': { opacity: '0', transform: 'translateY(40px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+            blob: { "0%": { transform: "translate(0px, 0px) scale(1)" }, "33%": { transform: "translate(30px, -50px) scale(1.1)" }, "66%": { transform: "translate(-20px, 20px) scale(0.9)" }, "100%": { transform: "translate(0px, 0px) scale(1)" } }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <style>
+    body { background-color: #F3F4F6; color: #111827; overflow-x: hidden; }
+    ::selection { background-color: #2563EB; color: white; }
+
+    .manim-text {
+      -webkit-text-stroke: 1.5px #111827;
+      color: transparent;
+      animation: draw 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+    .manim-text:hover {
+      -webkit-text-stroke-color: #2563EB;
+    }
+
+    @keyframes draw {
+      0% { opacity: 0; clip-path: inset(0 100% 0 0); }
+      100% { opacity: 1; clip-path: inset(0 0 0 0); }
+    }
+
+    .reveal-hidden { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+    .reveal-visible { opacity: 1; transform: translateY(0); }
+
+    .hover-line { position: relative; display: inline-block; }
+    .hover-line::after {
+      content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0;
+      background-color: #2563EB; transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .hover-line:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+    .bg-grain {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.4;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    }
+
+    .animation-delay-2000 { animation-delay: 2s; }
+    .animation-delay-4000 { animation-delay: 4s; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Grain texture -->
+  <div class="bg-grain"></div>
+
+  <!-- Animated blobs -->
+  <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+    <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+    <div class="absolute -top-40 right-20 w-[500px] h-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-0 -left-20 w-[600px] h-[600px] bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+  </div>
+
+  <!-- Particle canvas -->
+  <canvas id="particleCanvas" class="fixed inset-0 z-0 pointer-events-none mix-blend-multiply"></canvas>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-paper/80 backdrop-blur-md border-b border-divider">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+        </span>
+        <span class="font-mono text-xs uppercase tracking-widest font-bold text-ink">Shivek</span>
+      </div>
+      <div class="flex gap-8">
+        <a href="#projects" class="font-mono text-xs uppercase tracking-wider text-subtle hover:text-primary transition-colors">Projects</a>
+        <a href="#about" class="font-mono text-xs uppercase tracking-wider text-subtle hover:text-primary transition-colors">About</a>
+        <a href="mailto:shivek@example.com" class="font-mono text-xs uppercase tracking-wider text-subtle hover:text-primary transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto pt-20">
+    <div class="relative z-10">
+      <h1 class="text-[11vw] font-bold leading-[0.85] tracking-tighter animate-slide-up cursor-default">
+        <span class="block text-ink hover:text-primary transition-colors duration-500">SHIVEK</span>
+        <span class="block manim-text" style="font-size: inherit;">DEVELOPER</span>
+      </h1>
+      <div class="mt-8 pt-6 border-t border-divider flex flex-col md:flex-row justify-between gap-6 animate-fade-in" style="animation-delay: 1s; opacity: 0;">
+        <div class="font-mono text-xs md:text-sm text-subtle uppercase tracking-wider">
+          <p class="text-primary font-bold">Developer &amp; Creator</p>
+          <p>Building at the intersection of</p>
+          <p>Web Development and Technology.</p>
+        </div>
+        <a href="#projects" class="group font-mono text-xs uppercase tracking-wider text-subtle hover:text-primary transition-colors flex items-center gap-2 self-start md:self-end">
+          Scroll Down
+          <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Ticker -->
+  <div class="border-y border-divider bg-white/50 backdrop-blur-sm hover:border-primary transition-colors overflow-hidden py-4">
+    <div class="flex whitespace-nowrap animate-marquee">
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Web Development</span>
+      <span class="text-secondary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Full Stack Engineering</span>
+      <span class="text-primary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">UI/UX Design</span>
+      <span class="text-secondary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Open Source</span>
+      <span class="text-primary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Cloud Computing</span>
+      <span class="text-secondary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Web Development</span>
+      <span class="text-secondary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Full Stack Engineering</span>
+      <span class="text-primary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">UI/UX Design</span>
+      <span class="text-secondary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Open Source</span>
+      <span class="text-primary mx-2">&#9679;</span>
+      <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Cloud Computing</span>
+      <span class="text-secondary mx-2">&#9679;</span>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <section id="projects" class="px-6 md:px-12 max-w-7xl mx-auto py-24 relative z-10">
+    <h2 class="font-mono text-xs uppercase tracking-wider text-subtle mb-12">
+      <span class="text-primary">(01)</span> Experience
+    </h2>
+    <!-- Card 1 -->
+    <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden">
+      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
+        <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2025 - Present</span>
+        <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">TechVentures Inc.</span>
+        <span class="md:col-span-3 font-mono text-xs text-subtle uppercase">Full Stack Developer</span>
+        <p class="md:col-span-3 font-mono text-xs text-subtle opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">Building scalable web applications and microservices for enterprise clients using modern technologies.</p>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden">
+      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
+        <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2024 - 2025</span>
+        <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">OpenStack Labs</span>
+        <span class="md:col-span-3 font-mono text-xs text-subtle uppercase">Open Source Contributor</span>
+        <p class="md:col-span-3 font-mono text-xs text-subtle opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">Contributing to major open source projects. Maintaining developer tools and documentation.</p>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden">
+      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
+        <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2024</span>
+        <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">Hackathon Central</span>
+        <span class="md:col-span-3 font-mono text-xs text-subtle uppercase">Lead Developer</span>
+        <p class="md:col-span-3 font-mono text-xs text-subtle opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">Led a team of developers to build an award-winning application at a national hackathon competition.</p>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden border-b">
+      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
+        <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2023 - 2024</span>
+        <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">CodeCraft Academy</span>
+        <span class="md:col-span-3 font-mono text-xs text-subtle uppercase">Student Developer</span>
+        <p class="md:col-span-3 font-mono text-xs text-subtle opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">Completed intensive programs in web development, data structures, algorithms, and system design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section - Tech Stack & Recognition -->
+  <section id="about" class="px-6 md:px-12 max-w-7xl mx-auto py-24 relative z-10">
+    <!-- Tech Stack -->
+    <div class="mb-24 reveal-hidden">
+      <h2 class="font-mono text-xs uppercase tracking-wider text-subtle mb-12">
+        <span class="text-primary">(02)</span> Tech Stack
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            JavaScript (React)
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            TypeScript
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Node.js
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Python
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Tailwind CSS
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Git &amp; DevOps
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recognition -->
+    <div class="reveal-hidden">
+      <h2 class="font-mono text-xs uppercase tracking-wider text-subtle mb-12">
+        <span class="text-primary">(03)</span> Recognition
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Dean's List Honoree
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            National Hackathon Winner
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Open Source Award
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Academic Excellence
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Community Leadership
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+        <div class="group border-t border-divider pt-4 hover:border-primary transition-colors">
+          <span class="hover-line font-sans text-lg font-semibold flex items-center justify-between">
+            Tech Innovation Prize
+            <svg class="w-4 h-4 text-subtle opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer class="bg-ink text-paper border-t border-divider relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-[100px] opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-24 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+            Let's build<br>something <span class="text-primary italic">new</span>.
+          </h2>
+          <a href="mailto:shivek@example.com" class="inline-block mt-8 font-mono text-sm border-b border-paper/30 hover:border-primary hover:text-primary transition-colors pb-1">
+            shivek@example.com
+          </a>
+        </div>
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-col gap-4">
+            <a href="https://github.com/TheShulkerBoxx" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-wider text-paper/70 hover:text-primary transition-colors flex items-center gap-2">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              Github
+            </a>
+            <a href="#" class="font-mono text-xs uppercase tracking-wider text-paper/70 hover:text-primary transition-colors flex items-center gap-2">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4l11.733 16h4.267l-11.733 -16h-4.267z M4 20l6.768 -6.768 M15.232 10.768l4.768 -6.768"/></svg>
+              Twitter
+            </a>
+          </div>
+          <div class="flex items-center gap-2 mt-12 md:mt-0">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span class="font-mono text-xs text-subtle" id="copyright"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Copyright year
+    document.getElementById('copyright').textContent = `\u00A9 ${new Date().getFullYear()} Shivek`;
+
+    // Scroll reveal using IntersectionObserver
+    const revealElements = document.querySelectorAll('.reveal-hidden');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('reveal-hidden');
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Interactive Particle Canvas
+    (function() {
+      const canvas = document.getElementById('particleCanvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let mouse = { x: -1000, y: -1000 };
+      let animationId;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initParticles();
+      }
+
+      function initParticles() {
+        const count = Math.floor(canvas.width * canvas.height / 15000);
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5),
+            vy: (Math.random() - 0.5),
+            size: Math.random() * 2 + 1,
+            baseColor: '107, 114, 128'
+          });
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+          // Move
+          p.x += p.vx;
+          p.y += p.vy;
+
+          // Bounce
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+          // Mouse repulsion
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 300) {
+            const force = (300 - dist) / 300;
+            p.x += (dx / dist) * force * 2;
+            p.y += (dy / dist) * force * 2;
+          }
+
+          // Determine color
+          let color = p.baseColor;
+          if (dist < 100) color = '124, 58, 237'; // purple
+          else if (dist < 300) color = '37, 99, 235'; // blue
+
+          // Draw particle
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${color}, 0.6)`;
+          ctx.fill();
+        });
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 160) {
+              const midX = (particles[i].x + particles[j].x) / 2;
+              const midY = (particles[i].y + particles[j].y) / 2;
+              const mouseDist = Math.sqrt((midX - mouse.x) ** 2 + (midY - mouse.y) ** 2);
+              const opacity = (1 - dist / 160) * (mouseDist < 300 ? 0.6 : 0.1);
+              const lineColor = mouseDist < 300 ? `rgba(37, 99, 235, ${opacity})` : `rgba(107, 114, 128, ${opacity})`;
+
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = lineColor;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        }
+
+        animationId = requestAnimationFrame(animate);
+      }
+
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      });
+
+      resize();
+      animate();
+    })();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
