@@ -8,7 +8,7 @@
   <meta name="keywords" content="Shivek, developer, creator, web development, full stack, portfolio">
   <meta name="author" content="Shivek">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#2563EB">
+  <meta name="theme-color" content="#0B0D17">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Shivek | Developer & Creator">
@@ -54,12 +54,12 @@
       theme: {
         extend: {
           colors: {
-            paper: '#F3F4F6',
-            ink: '#111827',
-            subtle: '#6B7280',
-            divider: '#E5E7EB',
-            primary: '#2563EB',
-            secondary: '#7C3AED',
+            paper: '#0B0D17',
+            ink: '#E5E7EB',
+            subtle: '#9CA3AF',
+            divider: '#1F2937',
+            primary: '#3B82F6',
+            secondary: '#8B5CF6',
           },
           fontFamily: {
             sans: ['Space Grotesk', 'sans-serif'],
@@ -84,16 +84,16 @@
 
   <!-- Custom CSS -->
   <style>
-    body { background-color: #F3F4F6; color: #111827; overflow-x: hidden; }
-    ::selection { background-color: #2563EB; color: white; }
+    body { background-color: #0B0D17; color: #E5E7EB; overflow-x: hidden; }
+    ::selection { background-color: #3B82F6; color: white; }
 
     .manim-text {
-      -webkit-text-stroke: 1.5px #111827;
+      -webkit-text-stroke: 1.5px #E5E7EB;
       color: transparent;
       animation: draw 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     }
     .manim-text:hover {
-      -webkit-text-stroke-color: #2563EB;
+      -webkit-text-stroke-color: #3B82F6;
     }
 
     @keyframes draw {
@@ -107,7 +107,7 @@
     .hover-line { position: relative; display: inline-block; }
     .hover-line::after {
       content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0;
-      background-color: #2563EB; transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+      background-color: #3B82F6; transform-origin: bottom right; transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
     }
     .hover-line:hover::after { transform: scaleX(1); transform-origin: bottom left; }
 
@@ -127,13 +127,13 @@
 
   <!-- Animated blobs -->
   <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-    <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-    <div class="absolute -top-40 right-20 w-[500px] h-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-    <div class="absolute bottom-0 -left-20 w-[600px] h-[600px] bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-purple-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
+    <div class="absolute -top-40 right-20 w-[500px] h-[500px] bg-blue-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-0 -left-20 w-[600px] h-[600px] bg-indigo-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
   </div>
 
   <!-- Particle canvas -->
-  <canvas id="particleCanvas" class="fixed inset-0 z-0 pointer-events-none mix-blend-multiply"></canvas>
+  <canvas id="particleCanvas" class="fixed inset-0 z-0 pointer-events-none mix-blend-screen"></canvas>
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-paper/80 backdrop-blur-md border-b border-divider">
@@ -175,7 +175,7 @@
   </section>
 
   <!-- Marquee Ticker -->
-  <div class="border-y border-divider bg-white/50 backdrop-blur-sm hover:border-primary transition-colors overflow-hidden py-4">
+  <div class="border-y border-divider bg-white/5 backdrop-blur-sm hover:border-primary transition-colors overflow-hidden py-4">
     <div class="flex whitespace-nowrap animate-marquee">
       <span class="font-mono text-xs uppercase font-bold tracking-wider mx-4">Web Development</span>
       <span class="text-secondary mx-2">&#9679;</span>
@@ -207,7 +207,7 @@
     </h2>
     <!-- Card 1 -->
     <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden">
-      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="absolute inset-0 bg-blue-950 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
       <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
         <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2025 - Present</span>
         <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">TechVentures Inc.</span>
@@ -217,7 +217,7 @@
     </div>
     <!-- Card 2 -->
     <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden">
-      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="absolute inset-0 bg-blue-950 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
       <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
         <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2024 - 2025</span>
         <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">OpenStack Labs</span>
@@ -227,7 +227,7 @@
     </div>
     <!-- Card 3 -->
     <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden">
-      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="absolute inset-0 bg-blue-950 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
       <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
         <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2024</span>
         <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">Hackathon Central</span>
@@ -237,7 +237,7 @@
     </div>
     <!-- Card 4 -->
     <div class="experience-card reveal-hidden border-t border-divider hover:border-primary transition-all duration-500 group relative overflow-hidden border-b">
-      <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
+      <div class="absolute inset-0 bg-blue-950 opacity-0 group-hover:opacity-50 transition-opacity duration-500 origin-left scale-x-0 group-hover:scale-x-100 transform transition-transform duration-700"></div>
       <div class="relative grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 py-6 px-2 items-start">
         <span class="md:col-span-2 font-mono text-xs text-subtle uppercase">2023 - 2024</span>
         <span class="md:col-span-4 font-sans text-lg font-semibold text-ink">CodeCraft Academy</span>
@@ -341,7 +341,7 @@
   </section>
 
   <!-- Footer / Contact -->
-  <footer class="bg-ink text-paper border-t border-divider relative overflow-hidden">
+  <footer class="bg-[#060810] text-ink border-t border-divider relative overflow-hidden">
     <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-[100px] opacity-20"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-24 relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -349,17 +349,17 @@
           <h2 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
             Let's build<br>something <span class="text-primary italic">new</span>.
           </h2>
-          <a href="mailto:shivek@example.com" class="inline-block mt-8 font-mono text-sm border-b border-paper/30 hover:border-primary hover:text-primary transition-colors pb-1">
+          <a href="mailto:shivek@example.com" class="inline-block mt-8 font-mono text-sm border-b border-ink/30 hover:border-primary hover:text-primary transition-colors pb-1">
             shivek@example.com
           </a>
         </div>
         <div class="flex flex-col justify-between">
           <div class="flex flex-col gap-4">
-            <a href="https://github.com/TheShulkerBoxx" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-wider text-paper/70 hover:text-primary transition-colors flex items-center gap-2">
+            <a href="https://github.com/TheShulkerBoxx" target="_blank" rel="noopener noreferrer" class="font-mono text-xs uppercase tracking-wider text-subtle hover:text-primary transition-colors flex items-center gap-2">
               <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               Github
             </a>
-            <a href="#" class="font-mono text-xs uppercase tracking-wider text-paper/70 hover:text-primary transition-colors flex items-center gap-2">
+            <a href="#" class="font-mono text-xs uppercase tracking-wider text-subtle hover:text-primary transition-colors flex items-center gap-2">
               <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4l11.733 16h4.267l-11.733 -16h-4.267z M4 20l6.768 -6.768 M15.232 10.768l4.768 -6.768"/></svg>
               Twitter
             </a>
@@ -417,7 +417,7 @@
             vx: (Math.random() - 0.5),
             vy: (Math.random() - 0.5),
             size: Math.random() * 2 + 1,
-            baseColor: '107, 114, 128'
+            baseColor: '156, 163, 175'
           });
         }
       }
@@ -469,7 +469,7 @@
               const midY = (particles[i].y + particles[j].y) / 2;
               const mouseDist = Math.sqrt((midX - mouse.x) ** 2 + (midY - mouse.y) ** 2);
               const opacity = (1 - dist / 160) * (mouseDist < 300 ? 0.6 : 0.1);
-              const lineColor = mouseDist < 300 ? `rgba(37, 99, 235, ${opacity})` : `rgba(107, 114, 128, ${opacity})`;
+              const lineColor = mouseDist < 300 ? `rgba(59, 130, 246, ${opacity})` : `rgba(156, 163, 175, ${opacity})`;
 
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
