@@ -11,7 +11,7 @@ Developer & Creator building at the intersection of Web Development and Technolo
 | Project | Role | Description |
 |---------|------|-------------|
 | **TMAS Academy** | COO & Lead Developer | Built the website for a student-run nonprofit. Next.js, TypeScript, React. AI study assistant with vector embeddings. 500+ students. |
-| **GradeView** | Solo iOS Developer | Published iOS app on the App Store. Real-time grade tracking with Swift/SwiftUI frontend and Python/FastAPI backend with Firebase. |
+| **GradeDash** | Solo iOS Developer | Published iOS app on the App Store. Real-time grade tracking with Swift/SwiftUI frontend and Python/FastAPI backend with Firebase. |
 | **Wintersun-Predictions** | Co-developer | Prediction market analytics. Collecting Polymarket trades from Polygon blockchain. Wallet profiling for game-theoretic decision analysis. |
 | **Rubik's Cube Solver** | Solo Developer | Deep reinforcement learning applied to combinatorial group theory. Solving the 2x2 cube (3.6M states), extending to 3x3 (43 quintillion). |
 | **Eurus Macro** | Co-developer | Paid automation software built with .NET and WPF. 10 active subscribers generating ~$50/week. |
