@@ -15,6 +15,7 @@ Developer & Creator building at the intersection of Web Development and Technolo
 | **Wintersun-Predictions** | Co-developer | Prediction market analytics. Collecting Polymarket trades from Polygon blockchain. Wallet profiling for game-theoretic decision analysis. |
 | **Rubik's Cube Solver** | Solo Developer | Deep reinforcement learning applied to combinatorial group theory. Solving the 2x2 cube (3.6M states), extending to 3x3 (43 quintillion). |
 | **Eurus Macro** | Co-developer | Paid automation software built with .NET and WPF. 10 active subscribers generating ~$50/week. |
+
 | **KBDfans Keyboard Firmware** | Collaborator | Tracked down a firmware developer in China to fix a board bug. Provided ideas and example code that improved the public openkbd repository. |
 | **Shulker Chat** | Solo Developer | Real-time web chat app with Firebase backend. Channels, user authentication, admin tools, and games page. |
 
